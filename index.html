@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alvinwan/aframe-low-poly@0.0.5/dist/aframe-low-poly.min.js"></script>
+  </head>
+  <body>
+    <a-scene fog>
+      <!-- <a-entity camera look-controls>
+        <a-entity
+          geometry="primitive: plane; height: 0.2; width: 0.2"
+          position="10 10 -1"
+          material="color: gray; opacity: 0.5"
+        ></a-entity>
+      </a-entity> -->
+
+      <!-- Default lighting injected by A-Frame. -->
+      <a-entity light="type: ambient; color: #BBB"></a-entity>
+      <a-entity
+        light="type: directional; color: #FFF; intensity: 0.6"
+        position="-0.5 1 1"
+      ></a-entity>
+      <!-- Red directional light shining from the top left. -->
+      <a-light color="red" position="-1 1 0"></a-light>
+
+      <!-- Blue point light, 5 meters in the air. -->
+      <!-- <a-light type="spot" color="blue" position="0 5 0"></a-light> -->
+
+      <!-- Dim ambient lighting. -->
+      <a-light type="ambient" color="#222"></a-light>
+
+      <a-entity camera look-controls position="-10 -1 5" zoom="2"></a-entity>
+      <!-- <a-entity camera look-controls position="-3 3 5" zoom="2"></a-entity> -->
+      <!-- moon -->
+      <a-sphere emissive="white" radius="5" position="100 80 -70"></a-sphere>
+      <!-- <a-entity light="color: #AFA; intensity: 1.5 type: point" position="100 80 -70"></a-entity> -->
+
+      <!-- <a-icosahedron color="#FF926B" radius="5"></a-icosahedron> -->
+
+      <!-- left pillar -->
+
+      <a-box
+        position="-2 5.4 -10"
+        rotation="0 0 0"
+        color="#803f7f"
+        depth=".4"
+        height="4"
+        width=".4"
+      ></a-box>
+      <!-- right pillar -->
+      <a-box
+        position="2 5.4 -10"
+        rotation="0 0 0"
+        color="#803f7f"
+        depth=".4"
+        height="4"
+        width=".4"
+      ></a-box>
+      <!-- bottom red bar -->
+      <a-box
+        position="0 6.6 -10"
+        rotation="0 0 0"
+        color="#803f7f"
+        depth=".25"
+        height=".35"
+        width="5"
+      ></a-box>
+      <!-- top red bar -->
+      <a-box
+        position="0 7.4 -10"
+        rotation="0 0 0"
+        color="#803f7f"
+        depth=".4"
+        height=".4"
+        width="6"
+      ></a-box>
+      <!-- top black bar -->
+      <a-box
+        position="0 7.8 -10"
+        rotation="0 0 0"
+        color="black"
+        depth=".4"
+        height=".4"
+        width="6.5"
+      ></a-box>
+      <!-- middle bar -->
+      <a-box
+        position="0 6.8 -10"
+        rotation="0 0 0"
+        color="#803f7f"
+        depth=".2"
+        height="1"
+        width=".4"
+      ></a-box>
+      <!-- left support -->
+      <a-box
+        position="-2 3.4 -10"
+        rotation="0 0 0"
+        color="black"
+        depth=".4"
+        height=".4"
+        width=".4"
+      ></a-box>
+      <!-- right support -->
+      <a-box
+        position="2 3.4 -10"
+        rotation="0 0 0"
+        color="black"
+        depth=".4"
+        height=".4"
+        width=".4"
+      ></a-box>
+
+      <!-- stone fence -->
+      <!-- left side -->
+      <a-box
+        position="-5.6 3.75 -10.4"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth=".6"
+        height="1.5"
+        width=".6"
+      ></a-box>
+      <a-box
+        position="-4.5 3.75 -10.4"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth=".3"
+        height="1"
+        width=".3"
+      ></a-box>
+      <a-box
+        position="-3.6 3.75 -10.4"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth=".3"
+        height="1"
+        width=".3"
+      ></a-box>
+      <a-box
+        position="-2.6 3.75 -10.4"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth=".6"
+        height="1.5"
+        width=".6"
+      ></a-box>
+      <!-- material="src: stone.jpg; color: #696969; roughness: 1; metalness: 0" -->
+
+      <!-- left bar -->
+      <a-box
+        position="-4 4.1 -10.4"
+        rotation="0 0 90"
+        color="#435c8d"
+        depth=".4"
+        height="3.4"
+        width=".3"
+      ></a-box>
+      <a-box
+        position="-4 3.3 -10.4"
+        rotation="0 0 90"
+        color="#435c8d"
+        depth=".4"
+        height="3.4"
+        width=".3"
+      ></a-box>
+
+      <!-- right side -->
+      <a-box
+        position="5.6 3.75 -10.4"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth=".6"
+        height="1.5"
+        width=".6"
+      ></a-box>
+      <a-box
+        position="4.5 3.75 -10.4"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth=".3"
+        height="1"
+        width=".3"
+      ></a-box>
+      <a-box
+        position="3.6 3.75 -10.4"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth=".3"
+        height="1"
+        width=".3"
+        material="src: stone.jpg; color: #696969; roughness: .5; metalness: 0"
+      ></a-box>
+      <a-box
+        position="2.6 3.75 -10.4"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth=".6"
+        height="1.5"
+        width=".6"
+      ></a-box>
+
+      <!-- right bar -->
+      <a-box
+        position="4 4.1 -10.4"
+        rotation="0 0 90"
+        color="#435c8d"
+        depth=".4"
+        height="3.4"
+        width=".3"
+      ></a-box>
+      <a-box
+        position="4 3.3 -10.4"
+        rotation="0 0 90"
+        color="#435c8d"
+        depth=".4"
+        height="3.4"
+        width=".3"
+      ></a-box>
+
+      <!-- top ground -->
+      <a-box
+        position="0 2.65 -14"
+        rotation="0 0 0"
+        color="#2d3b60"
+        depth="8"
+        height="1.15"
+        width="12"
+      ></a-box>
+
+      <!-- top stairs -->
+      <a-box
+        position="0 2 -8"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth="1.5"
+        height=".5"
+        width="4"
+      ></a-box>
+      <a-box
+        position="0 1 -7"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth="1.5"
+        height=".5"
+        width="4"
+      ></a-box>
+      <a-box
+        position="0 0 -6"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth="1.5"
+        height=".5"
+        width="4"
+      ></a-box>
+      <a-box
+        position="0 -1 -5"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth="1.5"
+        height=".5"
+        width="4"
+      ></a-box>
+
+      <!-- bottom ground -->
+      <a-box
+        position="0 -1.7 -2"
+        rotation="0 0 0"
+        color="#2d3b60"
+        depth="8"
+        height=".5"
+        width="12"
+      ></a-box>
+
+      <!-- bottom stairs -->
+      <a-box
+        position="-7 -2 0"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth="4"
+        height=".3"
+        width="1"
+      ></a-box>
+      <a-box
+        position="-8 -2.5 0"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth="4"
+        height=".3"
+        width="1"
+      ></a-box>
+      <a-box
+        position="-9 -3 0"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth="4"
+        height=".3"
+        width="1"
+      ></a-box>
+      <a-box
+        position="-10 -3.5 0"
+        rotation="0 0 0"
+        color="#435c8d"
+        depth="4"
+        height=".3"
+        width="1"
+      ></a-box>
+
+      <!-- bamboo left fence -->
+      <a-cylinder
+        position="-2.4 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="-3 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="-3.6 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".0751"
+        material="src: wood.jpg; color: #696969; roughness: 1; metalness: 0"
+      ></a-cylinder>
+      <a-cylinder
+        position="-4.2 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="-4.8 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="-5.4 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+        material="src: wood.jpg; color: #696969; roughness: 1; metalness: 0"
+      ></a-cylinder>
+
+      <!-- bamboo right fence -->
+      <a-cylinder
+        position="1.8 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="2.4 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="3 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="3.6 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+        material="src: wood.jpg; color: #696969; roughness: 1; metalness: 0"
+      ></a-cylinder>
+      <a-cylinder
+        position="4.2 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="4.8 -.75 -3.5"
+        color="#614639"
+        height="1.25"
+        radius=".075"
+      ></a-cylinder>
+
+      <!-- fence bar -->
+      <a-cylinder
+        position="3.3 -.4 -3.5"
+        rotation="0 0 90"
+        color="#614639"
+        height="3.4"
+        material="src: wood.jpg; color: #696969; roughness: 1; metalness: 0"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="3.3 -1.2 -3.5"
+        rotation="0 0 90"
+        color="#614639"
+        height="3.4"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="-3.9 -.4 -3.5"
+        rotation="0 0 90"
+        color="#614639"
+        height="3.4"
+        radius=".075"
+      ></a-cylinder>
+      <a-cylinder
+        position="-3.9 -1.2 -3.5"
+        rotation="0 0 90"
+        color="#614639"
+        height="3.4"
+        radius=".075"
+      ></a-cylinder>
+
+      <!-- telephone pole -->
+      <a-cylinder
+        position="6 8 -12"
+        rotation="0 0 0"
+        color="#614639"
+        height="12"
+        radius=".15"
+      ></a-cylinder>
+      <a-cylinder
+        position="6 12 -11.4"
+        rotation="90 0 0"
+        color="#614639"
+        height="1.2"
+        radius=".15"
+      ></a-cylinder>
+      <a-cylinder
+        position="5.4 13 -12"
+        rotation="0 0 90"
+        color="#614639"
+        height="1.2"
+        radius=".15"
+      ></a-cylinder>
+
+      <a-box
+        position="5.6 12 -12"
+        rotation="0 0 0"
+        color="gray"
+        depth=".3"
+        height="1"
+        width=".2"
+      ></a-box>
+
+      <!-- line left -->
+      <a-entity
+        line="start: 5.6 13 -12; end: 1 12.4 -12; color: black"
+        line__2="start: 1 12.4 -12; end: -2 12.1 -11.9; color: black"
+        line__3="start: -2 12.1 -11.9; end: -5 12.3 -11.8; color: black"
+        line__4="start: -5 12.3 -11.8; end: -9 12.6 -11.4; color: black"
+        line__5="start: -9 12.6 -11.4; end: -12 13.2 -11; color: black"
+        line__6="start: 5.6 13 -12; end: 0 11.7 -12; color: black"
+        line__7="start: 0 11.7 -12; end: -3.2 11.4 -11.9; color: black"
+        line__8="start: -3.2 11.4 -11.9; end: -5.6 11.6 -11.8; color: black"
+        line__9="start: -5.6 11.6 -11.8; end: -8.7 12 -11.4; color: black"
+        line__10="start: -8.7 12 -11.4; end: -11.2 12.4 -11; color: black"
+      ></a-entity>
+
+      <!-- line right -->
+      <a-entity
+        line__1="start: 6.1 12.2 -11; end: 6.4 11.2 -9; color: black"
+        line__2="start: 6.4 11.2 -9; end: 7.4 11 -8; color: black"
+        line__3="start: 5.3 12.4 -11; end: 8 13 -10.7; color: black"
+        line__4="start: 8 13 -10.7; end: 14 15.2 -10; color: black"
+        line__5="start: 5.3 12.4 -11; end: 6.5 12.8 -10.8; color: black"
+        line__6="start: 6.5 12.8 -10.8; end: 14.2 16 -10; color: black"
+      ></a-entity>
+
+      <!-- petals -->
+      <!-- <a-triangle
+        position="-8 0 0"
+        rotation="90 0 0"
+        color="orange"
+        vertex-c=".03 -.04 .05"
+        scale="0.5 0.5 0.5"
+      ></a-triangle> -->
+
+      <!-- cloud -->
+      <!-- <a-box
+        position="0 14 -14"
+        rotation="0 0 0"
+        color="blue"
+        transparent="true"
+        opacity=".2"
+        depth="2"
+        height="1"
+        width="3"
+        fog="true"
+      ></a-box> -->
+
+      <!-- lamps -->
+      <a-dodecahedron
+        position="-5.6 5.4 -10.4"
+        color="#FF926B"
+        radius=".35"
+        emissive="yellow"
+        emissiveIntensity="1000"
+        animation="property: rotation; to: 360 360 360; loop: true; dur: 5000; easing: linear;"
+      ></a-dodecahedron>
+      <a-dodecahedron
+        position="5.6 5.4 -10.4"
+        color="#FF926B"
+        radius=".35"
+        emissive="yellow"
+        emissiveIntensity="1000"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear;"
+      ></a-dodecahedron>
+      <!-- <a-entity
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
+      >
+        <a-sphere position="5 0 0" color="mediumseagreen"></a-sphere>
+      </a-entity> -->
+      <a-cylinder
+        position="-5.6 5.4 -10.4"
+        radius=".4"
+        transparent="true"
+        opacity=".3"
+        material="side: double"
+        open-ended="true"
+      ></a-cylinder>
+      <a-cylinder
+        position="5.6 5.4 -10.4"
+        radius=".4"
+        transparent="true"
+        opacity=".3"
+        material="side: double"
+        open-ended="true"
+      ></a-cylinder>
+
+      <!-- <a-plane
+        position="0 0 -4"
+        rotation="-90 0 0"
+        width="4"
+        height="4"
+        color="#A1A1A1"
+      ></a-plane> -->
+      <a-sky color="#3674be"></a-sky>
+    </a-scene>
+  </body>
+</html>
